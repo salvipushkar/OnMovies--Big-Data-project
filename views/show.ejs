@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+
+
+<body>
+
+	<div class="fixed-header">
+		<h3 style="margin-left: 15px;">Movies</h3>
+		<ul class="nav nav-tabs">
+			<li><a href="/movies">Home</a></li>
+			<li><select
+				style="margin-top: 13px; border: none; background-color: #000; margin-right: 25px;">
+					<option value="default">Genre</option>
+					<option value="a">All</option>
+					<option value="b">Action</option>
+					<option value="c">Comedy</option>
+					<option value="d">Romance</option>
+					<option value="e">Adventure</option>
+			</select></li>
+			<li><select
+				style="margin-top: 13px; border: none; background-color: #000;">
+					<option value="default">Country</option>
+					<option value="a">USA</option>
+					<option value="b">India</option>
+					<option value="c">France</option>
+					<option value="d">Spain</option>
+			</select></li>
+			<li><select
+				style="margin-top: 13px; border: none; background-color: #000; margin-left: 25px;">
+					<option value="default">Language</option>
+					<option value="a">English</option>
+					<option value="b">Hindi</option>
+					<option value="c">French</option>
+					<option value="d">Spanish</option>
+			</select></li>
+		</ul>
+		<form>
+			<input type="text" name="search"
+				placeholder="Enter your movie name here...." width="100%"
+				style="margin-top: 5px; margin-bottom: 2px">
+		</form>
+		<button type="button" class="btn btn-primary"
+			style="position: absolute; top: 30px; right: 50px;">Login</button>
+	</div>
+
+
+	<div class="container"
+		style="position: absolute; top: 105px; width: 100%; padding-bottom: 450px;">
+		<p>
+			<img
+				src="/public/images/<%= movie.movie_name%>.jpg"
+				alt="Los Angeles" hspace="10px"
+				style="width: 100%; height: 400px;">
+		</p>
+		<table border="2">
+			<tr>
+				<td>Name</td>
+				<td><%= movie.movie_name%></td>
+			</tr>
+			<tr>
+				<td>Genre</td>
+				<td><%= movie.genre%></td>
+			</tr>
+			<tr>
+				<td>Release Date</td>
+				<td><%= movie.release_date%></td>
+			</tr>
+			<tr>
+				<td>Budget</td>
+				<td><%= movie.budget%></td>
+			</tr>
+			<tr>
+				<td>Revenue</td>
+				<td><%= movie.revenue%></td>
+			</tr>
+			<tr>
+				<td>Rating</td>
+				<td><%= movie.rating%></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><%= movie.price%></td>
+			</tr>
+			<tr>
+				<td>Overview</td>
+				<td><%= movie.overview%></td>
+			</tr>
+			<tr>
+				<td>Runtime</td>
+				<td><%= movie.runtime%></td>
+			</tr>
+			<tr>
+				<td>Tagline</td>
+				<td><%= movie.tagline%></td>
+			</tr>
+			<tr>
+				<td>Production Companies</td>
+				<td><%= movie.production_companies%></td>
+			</tr>
+			<tr>
+				<td>Cast</td>
+				<td><%= movie.cast%></td>
+			</tr>
+			<tr>
+				<td>Crew</td>
+				<td><%= movie.crew%></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="fixed-footer">
+		<div class="row">
+			<div class="col-md-12">Omovies - Free online movies, here you can watch movies online in high quality for free without annoying advertising, just come and enjoy your movies. You also can download movie, subtitles to your pc to watch offline.</div>
+			<div class="col-md-12">Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.</div>
+			<div class="col-md-3">FAQ</div>
+			<div class="col-md-3">Contact Us</div>
+			<div class="col-md-3">Sitemap</div>
+			<div class="col-md-3">Copyright &copy; 2017</div>
+			<div class="col-md-12"><a href="#" class="fa fa-facebook" style="margin-left: -20px;"></a> <a href="#" class="fa fa-twitter"></a> <a href="#" class="fa fa-instagram"></a></div>
+		</div>
+	</div>
+
+</body>
+</html>
