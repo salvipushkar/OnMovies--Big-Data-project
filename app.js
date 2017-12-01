@@ -14,7 +14,7 @@ var app = express();
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/movie')
+mongoose.connect('mongodb://ec2-13-59-8-77.us-east-2.compute.amazonaws.com/movie')
   .then(() =>  console.log('connection successful'))
   .catch((err) => console.error(err));
 
